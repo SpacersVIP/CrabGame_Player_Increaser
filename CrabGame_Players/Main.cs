@@ -22,6 +22,11 @@ namespace CrabGame_Players
             IsInLobby = true;
         }
 
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            IsInLobby = true;
+        }
+
         public override void OnGUI()
         {
             if (GameObject.Find("UI/CreateLobby/GameSettingsWindow") && IsInLobby)
